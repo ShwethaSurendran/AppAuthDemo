@@ -6,6 +6,7 @@
 
 import SwiftUI
 import SwiftData
+import AppAuthSwift
 
 struct ContentView: View {
     @StateObject private var viewModel:ContentViewModel = ContentViewModel()
@@ -15,11 +16,12 @@ struct ContentView: View {
             showPopOver = true
                 }
                 .fullScreenCover(isPresented: $showPopOver) {
-                    AuthLoginView(dismissPopUp: $showPopOver,
-                                  loginURL: viewModel.loginURL.loginURL )
-                    .onOpenURL { url in
-                        showPopOver = false
-                        viewModel.handleRedirection(url:url)
+                    if let url = viewModel.loginURL.loginURL {
+                        AuthLoginView(url: url)
+                        .onOpenURL { url in
+                            showPopOver = false
+                            viewModel.handleRedirection(url:url)
+                        }
                     }
                 }
     }

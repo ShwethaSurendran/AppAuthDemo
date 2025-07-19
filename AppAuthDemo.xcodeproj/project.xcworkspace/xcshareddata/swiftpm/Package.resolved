@@ -1,13 +1,13 @@
 {
-  "originHash" : "e8f130fe30ac6cdc940ef06ee1e8535e9f46ffee6aeead1722b9525562f6ce08",
+  "originHash" : "0be4d68d2c09f10681da45da9397fb2d1c6e32e7de40344e21da462271073921",
   "pins" : [
     {
-      "identity" : "alamofire",
+      "identity" : "appauthswift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "location" : "https://github.com/ShwethaSurendran/AppAuthSwift",
       "state" : {
-        "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
-        "version" : "5.10.2"
+        "branch" : "main",
+        "revision" : "d8d5444be86c06b7e7e8624f6861967846a10ce5"
       }
     }
   ],

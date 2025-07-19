@@ -5,16 +5,17 @@
 //
 
 import Foundation
+import AppAuthSwift
 
 class ContentViewModel: ObservableObject {
     
-    let kClientId = "xxxxx"
-    let kRedirectURI = "xxxx"
+    let kClientId = "***"
+    let kRedirectURI = "***"
     @Published var loginURL:LoginURL
     @Published var token:Token?
         
     init() {
-        loginURL = LoginURL (url: "https://accounts.google.com/o/oauth2/v2/auth?",
+        loginURL = LoginURL (baseURL: "https://accounts.google.com/o/oauth2/v2/auth?",
                              scope: ["email","profile"],
                              responseType: "code",
                              redirectURI: kRedirectURI,
@@ -47,15 +48,15 @@ extension ContentViewModel {
     @MainActor
     func createAuthReq (code: String) {
         
-        let authReq = AuthRequest(url: "https://oauth2.googleapis.com/token",
+        let authReq = AuthRequest(url: URL(string: "https://oauth2.googleapis.com/token")!,
                               code: code,
                               clientId: kClientId,
                               redirectUri: kRedirectURI)
         Task {
             do {
                 
-                let newToken = try await SimplyAuth.sharedInstance.getAuthToken(req: authReq)
-                defer {
+                let newToken = try await SimplyAuth.sharedInstance.getAuthToken(request: authReq)
+                do {
                     token = newToken
                     print("Debug: Login token\(String(describing: token))")
 

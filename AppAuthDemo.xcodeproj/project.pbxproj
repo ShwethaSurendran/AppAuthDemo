@@ -7,16 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F56F7DBA2E2281720018DB2B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F56F7DB92E2281720018DB2B /* Alamofire */; };
+		F5F40C2E2E2BD01D0088079B /* AppAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F5F40C2D2E2BD01D0088079B /* AppAuthSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F56F7D832E2280CF0018DB2B /* AppAuthDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAuthDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F5F40BD92E29CBA30088079B /* Exceptions for "AppAuthDemo" folder in "AppAuthDemo" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F56F7D822E2280CF0018DB2B /* AppAuthDemo */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F56F7D852E2280CF0018DB2B /* AppAuthDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F5F40BD92E29CBA30088079B /* Exceptions for "AppAuthDemo" folder in "AppAuthDemo" target */,
+			);
 			path = AppAuthDemo;
 			sourceTree = "<group>";
 		};
@@ -27,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F56F7DBA2E2281720018DB2B /* Alamofire in Frameworks */,
+				F5F40C2E2E2BD01D0088079B /* AppAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +83,7 @@
 			);
 			name = AppAuthDemo;
 			packageProductDependencies = (
-				F56F7DB92E2281720018DB2B /* Alamofire */,
+				F5F40C2D2E2BD01D0088079B /* AppAuthSwift */,
 			);
 			productName = AppAuthDemo;
 			productReference = F56F7D832E2280CF0018DB2B /* AppAuthDemo.app */;
@@ -101,7 +114,7 @@
 			mainGroup = F56F7D7A2E2280CF0018DB2B;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				F56F7DB82E2281720018DB2B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F5F40C2C2E2BD01D0088079B /* XCRemoteSwiftPackageReference "AppAuthSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F56F7D842E2280CF0018DB2B /* Products */;
@@ -263,6 +276,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppAuthDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppAuthDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -291,6 +305,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppAuthDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppAuthDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -333,21 +348,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F56F7DB82E2281720018DB2B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		F5F40C2C2E2BD01D0088079B /* XCRemoteSwiftPackageReference "AppAuthSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			repositoryURL = "https://github.com/ShwethaSurendran/AppAuthSwift";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F56F7DB92E2281720018DB2B /* Alamofire */ = {
+		F5F40C2D2E2BD01D0088079B /* AppAuthSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F56F7DB82E2281720018DB2B /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = F5F40C2C2E2BD01D0088079B /* XCRemoteSwiftPackageReference "AppAuthSwift" */;
+			productName = AppAuthSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
